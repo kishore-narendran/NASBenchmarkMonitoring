@@ -1,5 +1,5 @@
 import os
-
+import json
 def scrape_file(filename):
     with open ("output/" + filename, "r") as myfile:
         data=myfile.read()
@@ -26,4 +26,5 @@ def scrape_file(filename):
 
 for file in os.listdir("output/"):
     if file.endswith(".txt"):
-        print scrape_file(file)
+        with open("output/" + file[ : file.find(".")] + ".json", 'w') as fp:
+            json.dump(scrape_file(file), fp)

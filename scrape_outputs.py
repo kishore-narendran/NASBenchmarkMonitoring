@@ -4,6 +4,9 @@ def scrape_file(filename):
     with open ("output/" + filename, "r") as myfile:
         data=myfile.read()
 
+    if(data.find("Completed.") == -1):
+        return {}
+
     results = data[data.find("Completed.") + 11 : data.find("Compile")].split("\n")
     results = [ result.replace(" ", "") for result in results ]
     cpu_usage = data[data.find(".gov") + 4 : ].split(",")

@@ -4,8 +4,8 @@ import psutil
 import time
 
 #Enter the list of binary benchmarks here
-#NOTE - Enter ONLY the binaries' filenames
-benchmarks = ["bt.A", "bt.B", "bt.C", "bt.D", "bt.E", "bt.E"]
+#NOTE - Enter ONLY the binaries" filenames
+benchmarks = ['bt.C', 'cg.C', 'ep.C', 'ft.C', 'is.C', 'lu.C', 'mg.C', 'sp.C', 'ua.C']
 
 #Function to get the pid of the current benchmark
 def get_pid(name):
@@ -13,7 +13,7 @@ def get_pid(name):
 
 #Iterating and executing the benchmarks
 for benchmark in benchmarks:
-    print 'Running benchmark ' + benchmark
+    print "Running benchmark " + benchmark
 
     #Path to the benchmark binary with respect to script
     benchmark_path = "benbin/" + benchmark

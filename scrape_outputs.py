@@ -9,9 +9,9 @@ def scrape_file(filename):
 
     results = data[data.find("Completed.") + 11 : data.find("Compile")].split("\n")
     results = [ result.replace(" ", "") for result in results ]
-    cpu_usage = data[data.find(".gov") + 4 : ].split(",")
-    cpu_usage = [ usage.replace("\n", "") for usage in cpu_usage ]
-    cpu_usage = [ float(usage) for usage in cpu_usage ]
+    #cpu_usage = data[data.find(".gov") + 4 : ].split(",")
+    #cpu_usage = [ usage.replace("\n", "") for usage in cpu_usage ]
+    #cpu_usage = [ float(usage) for usage in cpu_usage ]
     benchmark_result = {};
     benchmark_result["class"] = results[0][ results[0].find("=") + 1 : ]
     benchmark_result["size"] = results[1][ results[1].find("=") + 1 : ]
@@ -24,7 +24,7 @@ def scrape_file(filename):
     benchmark_result["operation_type"] = results[8][ results[8].find("=") + 1 : ]
     benchmark_result["verification"] = results[9][ results[9].find("=") + 1 : ]
     benchmark_result["version"] = results[10][ results[10].find("=") + 1 : ]
-    benchmark_result["cpu_usage"] = cpu_usage
+    #benchmark_result["cpu_usage"] = cpu_usage
     return benchmark_result
 
 for file in os.listdir("output/"):

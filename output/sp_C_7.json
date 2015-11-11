@@ -1,0 +1,1 @@
+{"mops_total": 404.82, "available_threads": 7, "mops_thread": 57.83, "total_threads": 7, "version": "3.3", "verification": "SUCCESSFUL", "iterations": 400, "time": 3582.08, "operation_type": "floatingpoint", "class": "C", "size": "162x162x162"}

@@ -20,7 +20,7 @@
         10
 
 
- IS Benchmark Completed
+ IS Benchmark Completed.
  Class           =                        C
  Size            =                134217728
  Iterations      =                       10
@@ -47,4 +47,3 @@
 
  NPB Development Team
  npb@nas.nasa.gov
-

@@ -1,0 +1,75 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP) - DC Benchmark
+
+ No Paramter file. Using compiled defaults
+********************* ADC paramters
+ id		0
+ attributes 	15
+ measures   	1
+ tuples     	1000000
+ class		A
+ filename       ADC
+***********************************
+
+GenerateADC: writing 1000000 tuples of 15 attributes and 1 measures to ADC.dat.0
+Prime 	Generator 	Seed
+ 421	 16		 211
+ 601	 151		 301
+ 631	 98		 316
+ 701	 581		 351
+ 883	 729		 442
+ 419	 334		 210
+ 443	 123		 222
+ 647	 300		 324
+ 21737	 14249		 10869
+ 31769	 21291		 15885
+ 1427	 489		 714
+ 18353	 8936		 9177
+ 22817	 4767		 11409
+ 34337	 6733		 17169
+ 98717	 14136		 49359
+Binary ADC file ADC.dat.0 have been generated.
+View sizes are written into ADC.view.sz.0
+Estimated rb-tree size = 125000000 
+
+Number of available threads:  3
+
+*** DC Benchmark Results:
+ Benchmark Time   =              106.810
+ Input Tuples     =              1000000
+ Number of Views  =                  512
+ Number of Tasks  =                    3
+ Tuples Generated =            454765673
+ Tuples/s         =           4257704.20
+ Checksum         =   7.141688178042e+12
+
+
+ DC Benchmark Completed
+ Class           =                        A
+ Size            =                  1000000
+ Iterations      =                        1
+ Time in seconds =                   106.81
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                     4.26
+ Mop/s/thread    =                     1.42
+ Operation type  =         Tuples generated
+ Verification    =               SUCCESSFUL
+ Version         =                      3.3
+ Compile date    =              26 Oct 2015
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -fopenmp -lm
+    C_INC        = -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include/
+    CFLAGS       = -O -fopenmp
+    CLINKFLAGS   = -O -fopenmp
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+

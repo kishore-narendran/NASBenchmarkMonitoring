@@ -1,0 +1,62 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP) - CG Benchmark
+
+ Size:       14000
+ Iterations:                     15
+ Number of available threads:     7
+
+ Initialization time =           2.265 seconds
+
+   iteration           ||r||                 zeta
+        1       0.25857756841301E-12    19.9997581277040
+        2       0.25905121644757E-14    17.1140495745506
+        3       0.25307487706161E-14    17.1296668946143
+        4       0.25510285334238E-14    17.1302113581192
+        5       0.25125504847480E-14    17.1302338856353
+        6       0.25187928076552E-14    17.1302349879482
+        7       0.25003453180208E-14    17.1302350498916
+        8       0.24942503830385E-14    17.1302350537510
+        9       0.24734877478523E-14    17.1302350540101
+       10       0.24767355148177E-14    17.1302350540284
+       11       0.24517211861028E-14    17.1302350540298
+       12       0.24617417296530E-14    17.1302350540299
+       13       0.24003897987217E-14    17.1302350540299
+       14       0.24364747137548E-14    17.1302350540299
+       15       0.23961365537820E-14    17.1302350540299
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ Zeta is     0.1713023505403E+02
+ Error is    0.5226337199892E-13
+
+
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     6.41
+ Total threads   =                        7
+ Avail threads   =                        7
+ Mop/s total     =                   233.34
+ Mop/s/thread    =                    33.33
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.3
+ Compile date    =              04 Nov 2015
+
+ Compile options:
+    F77          = gfortran
+    FLINK        = $(F77)
+    F_LIB        = -L/usr/lib/gcc/arm-linux-gnueabihf/4.8.2/ -...
+    F_INC        = -I/usr/lib/gcc/arm-linux-gnueabihf/4.8.2/in...
+    FFLAGS       = -O -fopenmp
+    FLINKFLAGS   = -O
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+

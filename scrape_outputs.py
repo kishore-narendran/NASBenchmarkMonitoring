@@ -1,13 +1,13 @@
 import os
 import json
 def scrape_file(filename):
-    with open ("output/" + filename, "r") as myfile:
+    with open ("Output-Kishorex64/" + filename, "r") as myfile:
         data=myfile.read()
 
-    if(data.find("Completed.") == -1):
+    if(data.find("Completed") == -1):
         return {}
 
-    results = data[data.find("Completed.") + 11 : data.find("Compile")].split("\n")
+    results = data[data.find("Completed") + 11 : data.find("Compile")].split("\n")
     results = [ result.replace(" ", "") for result in results ]
     #cpu_usage = data[data.find(".gov") + 4 : ].split(",")
     #cpu_usage = [ usage.replace("\n", "") for usage in cpu_usage ]
@@ -27,7 +27,7 @@ def scrape_file(filename):
     #benchmark_result["cpu_usage"] = cpu_usage
     return benchmark_result
 
-for file in os.listdir("output/"):
+for file in os.listdir("Output-Kishorex64/"):
     if file.endswith(".txt"):
-        with open("output/" + file[ : file.find(".")] + ".json", 'w') as fp:
+        with open("Output-Kishorex64/" + file[ : file.find(".")] + ".json", 'w') as fp:
             json.dump(scrape_file(file), fp)

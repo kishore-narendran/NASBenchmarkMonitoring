@@ -2,7 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var async = require('async');
 var mongoClient = require('mongodb').MongoClient;
-var outputDirectory = path.join(__dirname, 'Output-NAS-1234');
+var outputDirectory = path.join(__dirname, 'Output-Kishorex64');
+var MACHINE_ID = 2;
 var singleThreadPerformance = {};
 var dbConnection;
 
@@ -13,7 +14,7 @@ var onFinish = function(err, results) {
   }
   else {
     console.log('Parsing JSON Files Complete!');
-    dbConnection.collection('results').insert(results, function(err, result) {
+    dbConnection.collection('results1').insert(results, function(err, result) {
       if(err) {
         console.log('MongoDB Write Error!');
       }
@@ -28,12 +29,12 @@ var onFinish = function(err, results) {
 var getTestMetrics = function(data, callback) {
   data['speedup'] = singleThreadPerformance[data['test_name']][data['class']]/data['time'];
   data['efficiency'] = data['speedup']/data['total_threads'];
-  data['machine_id'] = 2;
+  data['machine_id'] = MACHINE_ID;
   callback(null, data);
 };
 
 var getJSONData = function(jsonFile) {
-  var data = require(path.join(__dirname, 'output', jsonFile));
+  var data = require(path.join(outputDirectory, jsonFile));
   data['test_name'] = jsonFile.split('_')[0];
   return data;
 };

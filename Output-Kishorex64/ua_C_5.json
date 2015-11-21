@@ -1,0 +1,1 @@
+{"mops_total": 23.45, "available_threads": 5, "mops_thread": 4.69, "total_threads": 5, "version": "3.3", "verification": "SUCCESSFUL", "iterations": 200, "time": 374.38, "operation_type": "coll.pointadvanced", "class": "C", "size": "8"}

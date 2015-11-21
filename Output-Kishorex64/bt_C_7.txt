@@ -1,0 +1,67 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  200       dt:   0.0001000
+ Number of available threads:     7
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.6239811655176E+04 0.6239811655176E+04 0.8745405329840E-15
+           2 0.5079323919042E+03 0.5079323919042E+03 0.1231025265242E-14
+           3 0.1542353009301E+04 0.1542353009301E+04 0.1326779969727E-14
+           4 0.1330238792929E+04 0.1330238792929E+04 0.1025561771248E-14
+           5 0.1160408742844E+05 0.1160408742844E+05 0.2037804557397E-14
+ Comparison of RMS-norms of solution error
+           1 0.1646200836909E+03 0.1646200836909E+03 0.5006859157169E-14
+           2 0.1149710790382E+02 0.1149710790382E+02 0.9270280078746E-15
+           3 0.4120744620746E+02 0.4120744620746E+02 0.1896737316361E-14
+           4 0.3708765105969E+02 0.3708765105969E+02 0.6130711138251E-14
+           5 0.3621105305184E+03 0.3621105305184E+03 0.6122145446579E-14
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      200
+ Time in seconds =                   410.93
+ Total threads   =                        7
+ Avail threads   =                        7
+ Mop/s total     =                  6975.08
+ Mop/s/thread    =                   996.44
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.3
+ Compile date    =              17 Nov 2015
+
+ Compile options:
+    F77          = gfortran
+    FLINK        = $(F77)
+    F_LIB        = -L/usr/local/lib -fopenmp
+    F_INC        = -I/usr/local/include
+    FFLAGS       = -O -fopenmp
+    FLINKFLAGS   = -O
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
